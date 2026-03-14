@@ -10,6 +10,7 @@ wget -O discord.deb "https://discord.com/api/download?platform=linux&format=deb"
 sudo dpkg -i discord.deb
 sudo apt install steam lutris mangohud gamemode gamescope obs-studio piper
 sudo apt install flatpak
+sudo apt install samba cifs-utils smbclient
 # Docker Gruppe
 sudo usermod -aG docker $USER
 
