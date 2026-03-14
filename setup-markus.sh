@@ -8,7 +8,8 @@ sudo apt update && sudo apt upgrade -y
 xargs sudo apt install -y < tools.txt
 wget -O discord.deb "https://discord.com/api/download?platform=linux&format=deb"
 sudo dpkg -i discord.deb
-
+sudo apt install steam lutris mangohud gamemode gamescope obs-studio piper
+sudo apt install flatpak
 # Docker Gruppe
 sudo usermod -aG docker $USER
 
