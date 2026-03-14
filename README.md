@@ -6,7 +6,7 @@ Automatisches Setup für meine Linux Workstation.
 
 Repo klonen
 
-git clone https://github.com/USERNAME/linux-setup.git
+git clone https://github.com/Schenna43lp1/basislinuxmint/
 
 Script starten
 
