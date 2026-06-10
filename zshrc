@@ -1,18 +1,23 @@
-export ZSH="$HOME/.oh-my-zsh"
+# ===== Oh My Zsh =====
+if [[ -d "$HOME/.oh-my-zsh" ]]; then
+  export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+  ZSH_THEME="robbyrussell"
 
-plugins=(
-git
-docker
-sudo
-history
-)
+  plugins=(
+    git
+    docker
+    sudo
+    history
+  )
 
-source $ZSH/oh-my-zsh.sh
+  source "$ZSH/oh-my-zsh.sh"
+fi
 
-# Aliases laden
-source ~/.aliases
+# ===== Aliases =====
+[[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
-# Starship prompt
-eval "$(starship init zsh)"
+# ===== Starship Prompt =====
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
