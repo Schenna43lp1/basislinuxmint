@@ -1,35 +1,82 @@
-git
+# ============================================================
+# Paketliste für setup.sh
+# Eine Zeile pro Paket, Kommentare mit # sind erlaubt.
+# Nicht verfügbare Pakete werden beim Setup übersprungen.
+# Hinweis: Docker kommt NICHT hierher – setup.sh installiert
+# Docker CE aus dem offiziellen Docker-Repo.
+# ============================================================
+
+# ===== Basis & CLI =====
 curl
 wget
-htop
-btop
-neofetch
+gpg
+apt-transport-https
+ca-certificates
+software-properties-common
+git
 tmux
 zsh
-bat
-ripgrep
-fd-find
-fzf
-exa
 tree
 ncdu
 ranger
 tldr
-docker.io
-docker-compose
+jq
+unzip
+zip
+bat
+ripgrep
+fd-find
+fzf
+eza            # Nachfolger von exa (wird übersprungen, falls nicht verfügbar)
+
+# ===== Entwicklung =====
 nodejs
 npm
 python3
 python3-pip
+python3-venv
 golang
+
+# ===== Monitoring =====
+htop
+btop
+glances
+neofetch
+
+# ===== Netzwerk =====
 nmap
 tcpdump
 dnsutils
 iperf3
 traceroute
+net-tools
+mtr
+whois
 wireshark
-remmina
+
+# ===== Virtualisierung =====
+qemu-kvm
+libvirt-daemon-system
+libvirt-clients
+bridge-utils
 virt-manager
-glances
+
+# ===== Netzwerk-Shares (Samba) =====
+samba
+cifs-utils
+smbclient
+
+# ===== Desktop & System =====
+remmina
 timeshift
 bleachbit
+flatpak
+
+# ===== Gaming & Streaming =====
+steam
+lutris
+mangohud
+gamemode
+gamescope
+obs-studio
+piper

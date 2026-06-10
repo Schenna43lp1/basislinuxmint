@@ -1,31 +1,42 @@
-# System
+# ===== System =====
 alias update="sudo apt update && sudo apt upgrade -y"
 alias install="sudo apt install"
 
-# Navigation
+# ===== Navigation =====
 alias ..="cd .."
 alias ...="cd ../.."
 
-# Files
+# ===== Dateien =====
 alias ll="ls -lah"
 alias tree="tree -L 2"
 
-# Disk
-alias disk="ncdu /"
+# Ubuntu/Mint installieren bat und fd unter anderen Namen
+command -v batcat >/dev/null 2>&1 && alias bat="batcat"
+command -v fdfind >/dev/null 2>&1 && alias fd="fdfind"
 
-# Monitoring
+# ===== Disk & Monitoring =====
+alias disk="ncdu /"
 alias cpu="htop"
 alias ram="free -h"
 
-# Docker
+# ===== Docker =====
 alias dps="docker ps"
 alias dcu="docker compose up -d"
 alias dcd="docker compose down"
 
-# Networking
-alias myip="curl ifconfig.me"
+# ===== Kubernetes =====
+alias k="kubectl"
+alias mk="minikube"
+alias h="helm"
 
-# Git
+# ===== Netzwerk =====
+alias ports="ss -tulpen"
+alias myip="curl -4 ifconfig.me && echo"
+
+# ===== Git =====
 alias gs="git status"
 alias gp="git pull"
 alias gcm="git commit -m"
+
+# ===== Homelab =====
+alias pve="ssh root@192.168.1.69"
